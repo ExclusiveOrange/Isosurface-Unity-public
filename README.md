@@ -20,7 +20,7 @@ I initially considered Unreal Engine as the rendering front-end but ended up usi
 ### Mesh Generation
 This application attempts to approximate the isosurface within a large radius in all directions around the camera. The field is sampled at high resolution close-up and lower resolution far-away, such that the angular resolution of a mesh is about the same for near and for far portions of the isosurface.  
   
-The isosurface meshes are not stored ahead of time, and are calculated entirely at program run-time. The world is dynamically divided into chunks and rendered into triangle meshes using multiple worker threads. The meshes are then rendered to the screen by Unity, which also takes care of texturing and lighting.
+The isosurface meshes are not stored ahead of time, and are calculated entirely at program run-time. The world is dynamically divided into chunks of different sizes (in an oct-tree) and rendered into triangle meshes using multiple worker threads. The meshes are then rendered to the screen by Unity which takes care of texturing and lighting.
 ### Field Representation
 In this application scalar fields are defined by composable C# classes representing usually simple math functions. For example one class might provide a scalar function to define a cuboid, or another class might scale the position input to some other function to in effect change the size of the object.
 *TODO: put a picture of some simple field code here*
