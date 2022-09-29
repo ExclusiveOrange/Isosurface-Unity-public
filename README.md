@@ -6,7 +6,7 @@ This is a hobby project where I explored the idea of isosurface visualization in
 **_You will not be able to build this project from the provided source code in this repo._**  
 This is intentional at the moment in order to prevent plagiarism. I may decide to release the full source code at a later time.
 ### Getting the Executable
-A build for Windows is [available for download here](releases). You'll probably want a dedicated GPU but as it's a Unity project it may work on an integrated GPU.
+A build for Windows is [available for download here](https://github.com/ExclusiveOrange/Isosurface-Unity-public/releases). You'll probably want a dedicated GPU but as it's a Unity project it may work on an integrated GPU.
 ***
 ### Isosurface
 An isosurface is like a manifold which traces out some threshold value in a scalar field. For example a topographic map has elevation lines which are iso*lines* in a 2d scalar field (elevation). In 3d applications an *isosurface* usually means a triangle mesh of some weird shape or planetary surface.  
