@@ -1,11 +1,15 @@
 # Isosurface Experiments with Unity, public source
 ![image of spun rough cube](images/SpunRoughCube.png)
 ## Summary
-This is a hobby project where I explored the idea of isosurface visualization in 3d and its potential application to a game or other interactive 3d program. I didn't have anything particular in mind, I was just curious about *Marching Cubes* and similar visualizations and wanted to try implementing something like that.
-### Completeness Disclaimer
-I'm not ready to release the complete source code for this project to the public yet, given the problem with plagiarism on the internet. Therefore while this repo is mostly complete, I have left out some important parts in order to prevent someone else copy-pasting my work as their own. This means that while you can download and view most of the code, you won't be able to load it into Unity and build it without filling in the gaps yourself.
+This is a hobby project where I explored the idea of isosurface visualization in 3d and its potential application to a game or other interactive 3d program.
+### Getting the Source Code
+**_You will not be able to build this project from the provided source code in this repo._**  
+This is intentional at the moment in order to prevent plagiarism. I may decide to release the full source code at a later time.
+### Getting the Executable
+A build for Windows is [available for download here](releases). You'll probably want a dedicated GPU but as it's a Unity project it may work on an integrated GPU.
+***
 ### Isosurface
-An isosurface is like the manifold which traces out some threshold value in a scalar field. For example a topographic map has elevation lines which are iso*lines* in a 2d scalar field (elevation). In 3d applications an *isosurface* usually means a triangle mesh of some weird shape or planetary surface.  
+An isosurface is like a manifold which traces out some threshold value in a scalar field. For example a topographic map has elevation lines which are iso*lines* in a 2d scalar field (elevation). In 3d applications an *isosurface* usually means a triangle mesh of some weird shape or planetary surface.  
   
 The field used to describe an isosurface can be conveniently defined through the composition of arbitrary math functions. For example a sphere can be defined as the field function:
 >field(xyz) = radiusOfSphere - distance(xyz, centerOfSphere)
