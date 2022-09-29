@@ -36,6 +36,6 @@ In this application scalar fields are defined by composable C# classes, each of 
 
 ![image of complex isosurface](images/Planet1-with-source.png)
 ### Field Evaluation
-Each field class has an internal executable portion representing the operation done by that class. For example the field class corresponding to a _sphere_ field would implement an operation that takes a 3d coordinate as input and returns a scalar value as output.
+Each field class has an internal executable portion which carries out the operation done by that class. For example the field class corresponding to a _sphere_ field would implement an operation that takes a 3d coordinate as input and calculates and returns a scalar value as output.
 
-Before a field is evaluated, its composition expression is compiled into a program that runs on a simple stack machine implemented in this project. Such a program is similar in concept to a shader program. That program is then executed thousands of times per world chunk as the Dual Countouring algorithm evaluates the field value in different locations within the chunk.
+Before a field expression is evaluated, it is compiled into a program that runs on a simple stack machine implemented in this project. Such a program is similar in concept to a shader program in that it contains a list of instructions and some constant data. That program is then executed thousands of times per world chunk as the Dual Countouring algorithm evaluates the field value in different locations within the chunk as it generates a triangle mesh.
